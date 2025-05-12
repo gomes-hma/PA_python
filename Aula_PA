@@ -1,0 +1,348 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNZaZEJKR9oYjaP8EafyNcK",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/gomes-hma/PA_python/blob/main/Aula_PA\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "93mtgYn59ajZ",
+        "outputId": "03688b08-951e-4b53-b43a-0b6c21c7f739"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "verifique se essa idade é maior que a próxima: 4\n",
+            "segunda idade: 7\n",
+            "A primeira idade é maior?  False\n"
+          ]
+        }
+      ],
+      "source": [
+        "# entrada\n",
+        "idade1 = int(input(\"verifique se essa idade é maior que a próxima: \"))\n",
+        "idade2 = int(input(\"segunda idade: \"))\n",
+        "\n",
+        "# processamento\n",
+        "maior = idade1 > idade2\n",
+        "\n",
+        "# saida\n",
+        "print(\"A primeira idade é maior? \", maior)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# entrada\n",
+        "idade = int(input(\"sua idade: \"))\n",
+        "senhacerta = 1234\n",
+        "senha = int(input(\"senha: \"))\n",
+        "\n",
+        "# processamento\n",
+        "maior = idade >= 18\n",
+        "senhafunciona = senha == senhacerta\n",
+        "pode = maior == senhafunciona\n",
+        "\n",
+        "# saida\n",
+        "print(\"acesso permitido: \", pode)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xqy5WOOBGjn9",
+        "outputId": "3f6299dd-8ac7-4c84-a902-c7602f3e1b3f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "sua idade: 23\n",
+            "senha: 1234\n",
+            "acesso permitido:  True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# entrada\n",
+        "numero = int(input(\"escolhe um numero: \"))\n",
+        "\n",
+        "# processamento\n",
+        "naoentre = numero < 10 or numero > 50\n",
+        "\n",
+        "# saida\n",
+        "print(\"nao esta entre 10 e 50: \", naoentre)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "FeqbRqrGGn4q",
+        "outputId": "080c7acd-e85e-4c08-f90a-8001af948167"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "escolhe um numero: 45\n",
+            "nao esta entre 10 e 50:  False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# entrada\n",
+        "saldo = float(input(\"Saldo atual: \"))\n",
+        "preco = float(input(\"Preço do produto: \"))\n",
+        "cupom = bool(input(\"true/false: \"))\n",
+        "\n",
+        "# processamento\n",
+        "compra = saldo > preco or cupom\n",
+        "\n",
+        "# saida\n",
+        "print(\"pode comprar: \", compra)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VQa0uxr7GvnL",
+        "outputId": "fb5ab3d7-cb01-449e-a0db-feacb83f9d94"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Saldo atual: 3256\n",
+            "Preço do produto: 2048\n",
+            "true/false: true\n",
+            "pode comprar:  True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# entrada\n",
+        "number = float(input(\"Numero: \"))\n",
+        "# processamento\n",
+        "par = number % 2 == 0\n",
+        "positivo = number > 0\n",
+        "# saida\n",
+        "print(\"é par: \", par)\n",
+        "print(\"é positivo: \", positivo)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DR1MaeifG5kn",
+        "outputId": "a7cc905e-006f-4cfc-e887-c3a923c971ff"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Numero: 2\n",
+            "é par:  True\n",
+            "é positivo:  True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# entrada\n",
+        "idade = int(input(\"Minha idade: \"))\n",
+        "# processamento\n",
+        "Adolescente = idade >= 13 and idade <= 17\n",
+        "# saida\n",
+        "print(\"é adolscente: \", Adolescente)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CDLQM7rtG9f-",
+        "outputId": "856167af-e034-47ab-a75d-5ecb4b66b9dd"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Minha idade: 3\n",
+            "é adolscente:  False\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# entrada\n",
+        "senha = input(\"senha :\")\n",
+        "admin = bool(input(\"true ou false: \"))\n",
+        "# processamento\n",
+        "pode = senha == \"1234\" or admin\n",
+        "# saida\n",
+        "print(\"pode entrar: \", pode)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "L7ahSmCUHA2X",
+        "outputId": "66dcd947-44c2-4d66-9830-fd6bc419dcab"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "senha :2\n",
+            "true ou false: true\n",
+            "pode entrar:  True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# entrada e processamento\n",
+        "presente = input(\"s/n: \") == \"s\"\n",
+        "nota = int(input(\"nota: \")) >= 6 and presente\n",
+        "# saida\n",
+        "print(\"passou: \", nota)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gfJyv_y0HFM4",
+        "outputId": "4efab551-6a13-45c2-cc48-708926511748"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "s/n: s\n",
+            "nota: 8\n",
+            "passou:  True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "# entrada\n",
+        "vel = int(input(\"velocidade em km/h: \"))\n",
+        "# processamento\n",
+        "passou = vel > 80\n",
+        "# saida\n",
+        "print(\"multado: \", passou)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "A6HaejIiHLMF",
+        "outputId": "7b7dcbb8-c632-487c-837f-98e1d385b31a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "velocidade em km/h: 90\n",
+            "multado:  True\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# entrada\n",
+        "idade = int(input(\"idade: \")) >= 18\n",
+        "convite = input(\"s/n: \") == \"s\"\n",
+        "# processamento\n",
+        "entra = idade == convite\n",
+        "# saida\n",
+        "print(\"Pode entrar: \", entra)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "xAHDEfSHHPmv",
+        "outputId": "5e756e60-f78a-4bff-cd46-1105e9b4d2b1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "idade: 18\n",
+            "s/n: s\n",
+            "Pode entrar:  True\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
