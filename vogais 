@@ -1,0 +1,282 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOkPtB/ofvQc1hTZ6mORYKU",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/gomes-hma/PA_python/blob/main/vogais%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 2,
+      "metadata": {
+        "id": "2yb7d-kyefbr",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "01f3c4eb-e971-46b4-c7fe-79dbb8463c96"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "11\n"
+          ]
+        }
+      ],
+      "source": [
+        "x = \"hello world\"\n",
+        "\n",
+        "print(len(x))"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "txt = \"hello world\"\n",
+        "\n",
+        "txt[0]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "-VRTeO_ufk3p",
+        "outputId": "cabb1507-ee51-4198-92cb-2574c9e209ac"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'h'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "txt = \"hello world\"\n",
+        "\n",
+        "txt[2:5]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "7Weq81lDf57B",
+        "outputId": "7ee1063c-8d5d-4f54-d52d-ed07611d5080"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'llo'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 10
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "txt = \"hello world\"\n",
+        "\n",
+        "txt.upper()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 35
+        },
+        "id": "DELtplwWgjvg",
+        "outputId": "96710a64-bcde-4584-89f2-1d221e6fdc83"
+      },
+      "execution_count": 16,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'HELLO WORLD'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 16
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "txt = \"Eu gosto de vijar, tomar vinho, de estudar estudar programação, de estudar Pyhon\"\n",
+        "\n",
+        "txt.count(\"de\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DeEHfx9hgwzo",
+        "outputId": "6fec3297-399b-4a5c-cdce-079f4d28e5f7"
+      },
+      "execution_count": 19,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 19
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "txt = \"Eu gosto de vijar, tomar vinho, de estudar estudar programação, de estudar Pyhon\"\n",
+        "\n",
+        "txt.split(\",\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "266VeVCQhRuI",
+        "outputId": "8c0604be-c448-4749-b1a9-d26838673ac3"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Eu gosto de vijar',\n",
+              " ' tomar vinho',\n",
+              " ' de estudar estudar programação',\n",
+              " ' de estudar Pyhon']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome_completo = input(\"Digite seu nome completo: \")\n",
+        "\n",
+        "primeiro_nome = nome_completo.split()[0]\n",
+        "\n",
+        "num_letras = len(primeiro_nome)\n",
+        "num_letras2 = len(nome_completo.replace(\" \", \"\"))\n",
+        "\n",
+        "\n",
+        "print(f\"O nome completo tem {num_letras2} letras\")\n",
+        "print(f\"O primeiro nome tem {num_letras} letras.\")\n",
+        "print(nome_completo.upper())\n",
+        "print(nome_completo.lower())\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oeZTx6V8isjR",
+        "outputId": "a8b65782-d068-43a7-8b84-762649f65cac"
+      },
+      "execution_count": 54,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite seu nome completo: Arthur Hamilton moreira gomes\n",
+            "O nome completo tem 26 letras\n",
+            "O primeiro nome tem 6 letras.\n",
+            "ARTHUR HAMILTON MOREIRA GOMES\n",
+            "arthur hamilton moreira gomes\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "name = input(\"Type your whole name: \")\n",
+        "\n",
+        "v1 = name.count('a')\n",
+        "v2 = name.count('e')\n",
+        "v3 = name.count('i')\n",
+        "v4 = name.count('o')\n",
+        "v5 = name.count('u')\n",
+        "\n",
+        "vt = v1 + v2 + v3 + v4 + v5\n",
+        "\n",
+        "print(f\"seu nome tem {vt} vogais\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yGOj5g24pw_B",
+        "outputId": "0cca5aea-7d4d-416f-e07d-73402f01dce1"
+      },
+      "execution_count": 66,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Type your whole name: arthur franco dos santos\n",
+            "seu nome tem 7 vogais\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
