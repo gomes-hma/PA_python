@@ -1,0 +1,610 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNG4E9WJ4EBVUViG4ADbTET",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/gomes-hma/PA_python/blob/main/dicionario%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 9,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "dvECCMUcZ1o2",
+        "outputId": "eec500c6-276b-4dc1-ab39-5b21f5c391c8"
+      },
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "' habibi'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 9
+        }
+      ],
+      "source": [
+        "nome = \"hamodi habibi\"\n",
+        "turma = \"noite\"\n",
+        "\n",
+        "nome[6:]"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome = \"hamodi habibi\"\n",
+        "turma = \"noite\"\n",
+        "\n",
+        "nome[::-1]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "LLz_ZC8xcdyv",
+        "outputId": "ed0f891d-786d-4771-dadf-fc2a4db450af"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'ibibah idomah'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 22
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from os.path import split\n",
+        "frase = \"Python é a linguagem ideal para o primeiro contato com programação, além da sua sintaxe simples e muito poderosa, Python tem diversas aplicações como: desenvolvimento web, análise de dados, inteligência artificial e automatização de tarefas, neste curso você aprenderá a lógica de programação para conquistar fluência na linguagem, a comunidade Python é a que mais cresce, assim como sua demanda de profissionais no mercado.\"\n",
+        "\n",
+        "frase.split(\",\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ppp_l9W-c2rL",
+        "outputId": "bb62a84e-6aee-4c4c-a8fd-518cea997ce4"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Python é a linguagem ideal para o primeiro contato com programação',\n",
+              " ' além da sua sintaxe simples e muito poderosa',\n",
+              " ' Python tem diversas aplicações como: desenvolvimento web',\n",
+              " ' análise de dados',\n",
+              " ' inteligência artificial e automatização de tarefas',\n",
+              " ' neste curso você aprenderá a lógica de programação para conquistar fluência na linguagem',\n",
+              " ' a comunidade Python é a que mais cresce',\n",
+              " ' assim como sua demanda de profissionais no mercado.']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list(range(1,11))\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dTCFs0uWdJJ6",
+        "outputId": "664b2f25-c097-4ccf-c543-4728d9a21909"
+      },
+      "execution_count": 36,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "<class 'list'>\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "Objects = [\"eraser\",\"pen\",'pencil','sharpner','book']\n",
+        "print(Objects)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HFqFdeHOdxON",
+        "outputId": "10917588-d42a-42ea-9d74-110caa68241b"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['eraser', 'pen', 'pencil', 'sharpner', 'book']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "str1=\"a terra é o unico planeta habitavel\"\n",
+        "str2=\" e com agua em estado liquido\"\n",
+        "\n",
+        "str1 + str2"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "CpV4SMZ3e1S2",
+        "outputId": "44f592c6-f962-4431-fabd-01417faa2f49"
+      },
+      "execution_count": 39,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'a terra é o unico planeta habitavel e com agua em estado liquido'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 39
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num = (\"1\",\"2\",\"2\",\"3\",\"4\",\"4\",\"4\",\"5\")\n",
+        "num.count(\"4\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Gz9gh-hgfWng",
+        "outputId": "50f04d38-88fd-4876-d140-21b923ffd3cc"
+      },
+      "execution_count": 43,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 43
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = 'Cientista de Dados é o profissional mais legal do século XXI'\n",
+        "frase[0:18]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "F7JGR1SAgwFj",
+        "outputId": "ae61d15f-d751-46a7-d80b-4736ef9ad1e2"
+      },
+      "execution_count": 48,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'Cientista de Dados'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 48
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "frase = \"crazy? i was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy crazy? i was crazy once, they locked me in a room, a rubber room, a rubber room with rats, and the rats made me crazy\"\n",
+        "print(len(frase))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1A6vM2XhgUP-",
+        "outputId": "dca072d9-3136-4d9c-e01a-841687070821"
+      },
+      "execution_count": 46,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "235\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "txt = \"Hello World\"\n",
+        "txt[0]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "eAPR3XcehQph",
+        "outputId": "53e989cc-d03b-4921-9d2e-f89614efffd4"
+      },
+      "execution_count": 49,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'H'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 49
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "txt = \"Hello World\"\n",
+        "txt[2:5]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "e-TBPSTwh5Uh",
+        "outputId": "44f4a5f9-a77d-4ccd-e3ea-7a930cb4650d"
+      },
+      "execution_count": 51,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'llo'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 51
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "txt = \"Hello World\"\n",
+        "txt.upper()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "id": "ZSEMwfYFiIpM",
+        "outputId": "2bfdb740-4871-4175-aae1-4ad3538f4077"
+      },
+      "execution_count": 56,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'HELLO WORLD'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 56
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "txt = \"Eu gosto de vijar, tomar vinho, de estudar estudar programação, de estudar Pyhon\"\n",
+        "txt.count(\"de\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MKhdwAN7iPBe",
+        "outputId": "5df4f9df-efca-47f9-d9fa-32fbdedca660"
+      },
+      "execution_count": 57,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "3"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 57
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "txt = \"Eu gosto de vijar, tomar vinho, de estudar estudar programação, de estudar Pyhon\"\n",
+        "txt.split(\",\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Jm2mH6awiVmW",
+        "outputId": "a398a7fa-96d2-45cf-f10e-b9f40ec22cb4"
+      },
+      "execution_count": 58,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Eu gosto de vijar',\n",
+              " ' tomar vinho',\n",
+              " ' de estudar estudar programação',\n",
+              " ' de estudar Pyhon']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 58
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dicionario= {}\n",
+        "print(dicionario)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "3JRabTVfkUUx",
+        "outputId": "104f9b82-df3a-4d5d-9b55-e7e4721e3cfc"
+      },
+      "execution_count": 60,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dc = {\n",
+        " \"age\": [\"17\"],\n",
+        " \"name\": [\"Gomes\"],\n",
+        "  \"grades\":[\"8\"]\n",
+        "}\n",
+        "\n",
+        "print(dc)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KYJlr5OKke4D",
+        "outputId": "f7450c68-49b0-49a7-d14b-27e5adc86880"
+      },
+      "execution_count": 63,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'age': ['17'], 'name': ['Gomes'], 'grades': ['8']}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dc = {\n",
+        " \"age\": [\"17\"],\n",
+        " \"name\": [\"Gomes\"],\n",
+        "  \"grades\":[\"8\"]\n",
+        "}"
+      ],
+      "metadata": {
+        "id": "5KFGIDBGlXr6"
+      },
+      "execution_count": 66,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dc[\"states\"]= \"São Paulo\""
+      ],
+      "metadata": {
+        "id": "Q-n4Vl2OluS_"
+      },
+      "execution_count": 68,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(dc)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZQNRC0jMl2cX",
+        "outputId": "0bda702d-9bc8-4e4e-e025-77610d51c844"
+      },
+      "execution_count": 69,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'age': ['17'], 'name': ['Gomes'], 'grades': ['8'], 'states': 'paraibano'}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list = {\n",
+        " \"name\": \"Gomes\",\n",
+        " \"age\": (\"17y\",\"1m\"),\n",
+        " \"school\": \"Etec MCM\",\n",
+        "  \"grades\":[\"8\",\"9\",\"10\",\"5\"],\n",
+        "  \"skipped class\": [\"1\",\"25\",\"17\",\"45\"],\n",
+        "  \"tests taken\": {\"18\",\"16\",\"17\",\"12\"}\n",
+        "}\n",
+        "print(dc)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Cw6gxioimCTF",
+        "outputId": "622b616f-881e-44fe-d03e-fa8f3061177a"
+      },
+      "execution_count": 71,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'age': '17', 'name': 'Gomes', 'school': 'Etec MCM', 'grades': ['8', '9', '10', '5'], 'skipped class': ['1', '25', '17', '45'], 'tests taken': {'17', '16', '18', '12'}}\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "list = [\n",
+        "   \"Gomes\",\n",
+        "   (\"17y\",\"1m\"),\n",
+        "    {\"money\": {\"7.452\"},\"travels\": {2},\n",
+        "    \"countries visited\" : \"Canada,Italy\",\n",
+        "    \"languages studied\" : \"english, portuguese, russian\"\n",
+        "    },\n",
+        "   5.10\n",
+        "]\n",
+        "print(dc)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0_7lGKI-omjl",
+        "outputId": "fbd83c87-713f-487d-9faa-bc048ba0df54"
+      },
+      "execution_count": 84,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "{'age': '17', 'name': 'Gomes', 'school': 'Etec MCM', 'grades': ['8', '9', '10', '5'], 'skipped class': ['1', '25', '17', '45'], 'tests taken': {'17', '16', '18', '12'}}\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
