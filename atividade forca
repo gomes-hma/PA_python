@@ -1,0 +1,125 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOVrbJtVEXepByYcxl1aplY",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/gomes-hma/PA_python/blob/main/atividade%20forca\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "9I8D3r1qJGwo",
+        "outputId": "2a3bafe9-d38d-46fb-f75a-aa858da61da3"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "JOGO DA FORCA\n",
+            "\n",
+            "Palavra: ____\n",
+            "Erros: \n",
+            "Tentativas restantes: 6\n",
+            "Digite uma letra: m\n",
+            "\n",
+            "Palavra: _m__\n",
+            "Erros: \n",
+            "Tentativas restantes: 6\n",
+            "Digite uma letra: a\n",
+            "\n",
+            "Palavra: am__\n",
+            "Erros: \n",
+            "Tentativas restantes: 6\n",
+            "Digite uma letra: o\n",
+            "\n",
+            "Palavra: amo_\n",
+            "Erros: \n",
+            "Tentativas restantes: 6\n",
+            "Digite uma letra: r\n",
+            "\n",
+            "Palavra: amor\n",
+            "Erros: \n",
+            "Tentativas restantes: 6\n",
+            "\n",
+            " Você venceu A palavra era: amor\n"
+          ]
+        }
+      ],
+      "source": [
+        "import random\n",
+        "\n",
+        "palavras = [\"amor\", \"praia\", \"feliz\", \"sonho\", \"tarde\", \"mundo\", \"agua\", \"vento\", \"papel\", \"luzes\", \"rosto\", \"casa\", \"chave\", \"flor\", \"ritmo\", \"canto\", \"janela\", \"grama\", \"molho\"]\n",
+        "\n",
+        "def jogar_forca():\n",
+        "    palavra = random.choice(palavras)\n",
+        "    letras_corretas = set()\n",
+        "    letras_erradas = set()\n",
+        "    tentativas = 6\n",
+        "\n",
+        "    print(\"JOGO DA FORCA\")\n",
+        "\n",
+        "    while tentativas > 0:\n",
+        "        exibicao = \"\".join([letra if letra in letras_corretas else \"_\" for letra in palavra])\n",
+        "        print(\"\\nPalavra:\", exibicao)\n",
+        "        print(\"Erros:\", \" \".join(sorted(letras_erradas)))\n",
+        "        print(\"Tentativas restantes:\", tentativas)\n",
+        "\n",
+        "        if \"_\" not in exibicao:\n",
+        "            print(\"\\n Você venceu A palavra era:\", palavra)\n",
+        "            return\n",
+        "\n",
+        "\n",
+        "        chute = input(\"Digite uma letra: \").lower()\n",
+        "\n",
+        "\n",
+        "        if len(chute) != 1 or not chute.isalpha():\n",
+        "            print(\"Digite apenas UMA letra válida seu animal.\")\n",
+        "            continue\n",
+        "\n",
+        "\n",
+        "        if chute in palavra:\n",
+        "            if chute not in letras_corretas:\n",
+        "                letras_corretas.add(chute)\n",
+        "            else:\n",
+        "                print(\"Você já tentou essa letra.\")\n",
+        "        else:\n",
+        "            if chute not in letras_erradas:\n",
+        "                letras_erradas.add(chute)\n",
+        "                tentativas -= 1\n",
+        "            else:\n",
+        "                print(\"Você já errou essa letra antes.\")\n",
+        "\n",
+        "    print(\"\\n Você perdeu e palavra era:\", palavra)\n",
+        "\n",
+        "jogar_forca()\n",
+        "\n"
+      ]
+    }
+  ]
+}
